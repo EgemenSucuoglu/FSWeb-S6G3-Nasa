@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./Header";
+import Date from "./Date";
+import styled from "styled-components";
 
 function App() {
   const [date, setDate] = useState();
@@ -24,14 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <p>
-        NASA uygulamasını yapmak için README.md dosyasıdaki talimatları takip
-        edin İyi eğlenceler!{" "}
-        <span role="img" aria-label="go!">
-          🚀
-        </span>
-        !
-      </p>
+      <Date onChange={dateChanger}></Date>
     </div>
   );
 }
