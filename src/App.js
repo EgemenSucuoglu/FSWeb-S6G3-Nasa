@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./Header";
 import Date from "./Date";
 import styled from "styled-components";
+import Section from "./Section";
 
 function App() {
   const [date, setDate] = useState();
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <Date onChange={dateChanger}></Date>
+      <Section data={data} />
     </div>
   );
 }
